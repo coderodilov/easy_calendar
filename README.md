@@ -98,4 +98,40 @@ class _CalendarPageState extends State<CalendarPage> {
   }
 }
 
+```
+
+
+Step 4: Use the EasyCalendar widget
+For using Localization u should init localization to your app first.
+
+```dart
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      supportedLocales: [
+        Locale('en'),
+        Locale('uz'),
+      ],
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      home: HomePage()
+    );
+  }
+}
+```
+
+![Screenshot_20241128_104335](https://github.com/user-attachments/assets/f5b27f52-8a5e-4497-beba-a3215201a428)
+
+
+
+
+
+
 
